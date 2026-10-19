@@ -1,7 +1,6 @@
 {
-  "name": "PickNick 2026 • BPKPD Magetan",
-  "short_name": "PickNick 2026",
-  "description": "Aplikasi Resmi Piknik BPKPD Magetan Goes to Jogja 2026",
+  "name": "Picnic 2026 • BPKPD Magetan",
+  "short_name": "Picnic 2026",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -10,7 +9,7 @@
   "theme_color": "#0f172a",
   "icons": [
     {
-      "src": "https://lh3.googleusercontent.com/d/1ddup-s6iL1DP4B5va8FyJGXyhD5oc0-r",
+      "src": "picnic2026.png",
       "sizes": "192x192 512x512",
       "type": "image/png",
       "purpose": "any maskable"
