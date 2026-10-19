@@ -3,43 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>PickNick 2026 • BPKPD Magetan</title>
-  
-  <!-- Identitas PWA Layar Utama HP -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Picnic 2026 • BPKPD Magetan</title>
+
   <meta name="theme-color" content="#0f172a">
   <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Picnic 2026">
 
-  <!-- Icon Favicon Tab & iPhone -->
-  <link rel="icon" type="image/x-icon" href="picnic.ico">
-  <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/1ddup-s6iL1DP4B5va8FyJGXyhD5oc0-r">
-
-  <!-- File KTP Manifest PWA -->
+  <!-- Ikon Aplikasi -->
+  <link rel="icon" type="image/png" href="picnic2026.png">
+  <link rel="apple-touch-icon" href="picnic2026.png">
   <link rel="manifest" href="manifest.json">
 
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
-      margin: 0;
-      padding: 0;
       width: 100%;
       height: 100%;
+      height: 100dvh;
       overflow: hidden;
       background-color: #0f172a;
     }
     iframe {
       width: 100%;
       height: 100%;
+      height: 100dvh;
       border: none;
       display: block;
     }
   </style>
 </head>
 <body>
-  <!-- Engine Apps Script Akurat 100% -->
+
+  <!-- PINTU MASUK KE APPS SCRIPT -->
   <iframe 
-    src="https://script.google.com/macros/s/AKfycbzWZoDr7l5VDr2oRuUltbmU7AJemKxZQ2eUAt-zUyPFg8jCJNXryXVl7Ud9P_N5IuXS/exec" 
-    allow="fullscreen; geolocation; camera; clipboard-write"
+    id="appFrame"
+    src="TEMPEL_URL_EXEC_GOOGLE_APPS_SCRIPT_LU_DI_SINI" 
+    allow="camera; microphone; geolocation; fullscreen; clipboard-write"
   ></iframe>
+
+  <!-- Service Worker Engine -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./sw.js').catch(function() {});
+      });
+    }
+  </script>
 </body>
 </html>
